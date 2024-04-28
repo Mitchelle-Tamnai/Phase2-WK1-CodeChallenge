@@ -1,4 +1,5 @@
 import React from "react";
+import Row from "./Row";
 
 function Table() {
     return (
@@ -6,7 +7,7 @@ function Table() {
             <table>
                 <thead>
                     <th>Date</th>
-                    <th>Product/Item</th>
+                    <th>Product</th>
                     <th>Category</th>
                     <th>Price</th>
                 </thead>
