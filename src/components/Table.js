@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Row from "./Row";
 
 function Table() {
 
-    let transactions = [
+    const [transactions, setTransactions] = useState([
         {
             date: "2024-01-05",
             description: "Paycheck from YouTube",
@@ -40,11 +40,22 @@ function Table() {
 
         }
     ]
+)
+
+    function filterItems(event){
+        const change = event.target.value
+        const filter = transactions.filter(transactions => {
+            return transactions.category.toLowerCase().includes(change.toLowerCase())
+        })
+
+        setTransactions([...filter])
+
+    }
 
     return (
         <>
             <div className="p-3">
-                <input className="form-control me-2" type="search" placeholder="Search for Recent Transactions" aria-label="Search"/>
+                <input onChange={filterItems} className="form-control me-2" type="search" placeholder="Search for Recent Transactions"/>
             </div>
             <div>
                 <form>
