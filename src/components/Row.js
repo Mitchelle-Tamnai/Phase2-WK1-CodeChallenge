@@ -1,14 +1,20 @@
 import React from "react";
 
-function Row(props) {
+function Row({transactions}) {
+
+    const rows = transactions.map((trans, index) => {
+        return <tr key={index+1}>
+        <td>{trans.date}</td>
+        <td>{trans.description}</td>
+        <td>{trans.category}</td>
+        <td>{trans.amount}</td>
+    </tr>
+
+    })
+
     return (
         <>
-            <td>
-                <tr>{props.date}</tr>
-                <tr>{props.product}</tr>
-                <tr>{props.category}</tr>
-                <tr>{props.price}</tr>
-            </td>
+            {rows}
         </>
     )
     
