@@ -57,11 +57,23 @@ function Table() {
             <div className="p-3">
                 <input onChange={filterItems} className="form-control me-2" type="search" placeholder="Search for Recent Transactions"/>
             </div>
-            <div>
-                <form>
+            <div class="container-fluid">
+    <form class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <input class="form-control mb-2" type="date" placeholder=""/>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <input class="form-control mb-2" type="text" placeholder="Description"/>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <input class="form-control mb-2" type="text" placeholder="Category"/>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <input class="form-control mb-2" type="text" placeholder="Amount"/>
+        </div>
+    </form>
+</div>
 
-                </form>
-            </div>
             <table className="table table-bordered table-striped">
                 <thead>
                     <tr>
