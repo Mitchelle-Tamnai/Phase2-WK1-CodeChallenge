@@ -15,6 +15,15 @@ function Form({transactions, setTransactions}) {
         event.preventDefault()
         setTransactions([...transactions, newTransaction])
 
+        const transactionToAdd = {
+            date: newTransaction.date,
+            description: newTransaction.description,
+            category: newTransaction.category,
+            amount: newTransaction.amount
+        }
+
+        setTransactions([...transactions, transactionToAdd]);
+
         setNewTransaction({
             date: "",
             description: "",
