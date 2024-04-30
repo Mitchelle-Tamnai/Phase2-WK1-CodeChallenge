@@ -1,18 +1,6 @@
 import React from "react";
 
     function Button() {
-    //     const [[newTransactions], setNewTransactions] = useState({
-    //         date: "",
-    //         description: "",
-    //         category: "",
-    //         amount: ""
-    // })
-
-    // function addTransaction(event) {
-    //     event.preventDefault()
-    //     console.log(newTransactions)
-        
-    // }
 
     return(
         <div>
