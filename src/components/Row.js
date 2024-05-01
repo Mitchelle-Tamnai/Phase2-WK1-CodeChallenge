@@ -2,7 +2,7 @@ import React from "react";
 
 function Row({transactions}) {
 
-    const rows = transactions.map((trans, index) => {
+    const rows = transactions ? transactions.map((trans, index) => {
         return <tr key={index+1}>
         <td>{trans.date}</td>
         <td>{trans.description}</td>
@@ -10,7 +10,7 @@ function Row({transactions}) {
         <td>{trans.amount}</td>
     </tr>
 
-    })
+    }) : null; 
 
     return (
         <>
@@ -21,3 +21,4 @@ function Row({transactions}) {
 }
 
 export default Row
+
